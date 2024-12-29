@@ -4,7 +4,7 @@ function ListComponent({ room, user, handleOnClick }) {
   return (
     <div
       className="card margin16 list padding5"
-      onClick={() => handleOnClick(room, user)}
+      onClick={(e) => handleOnClick(e,room, user)}
     >
       <div className="image margin5">
         <img src={room.image} alt={room.name} />

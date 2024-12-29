@@ -27,7 +27,7 @@ function App() {
     
 
 
-    const SOCKET_URL = 'http://localhost:3000';
+    const SOCKET_URL = 'https://pingmebackend.onrender.com';
 
     const socket = io(SOCKET_URL);
 

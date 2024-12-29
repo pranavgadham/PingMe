@@ -18,8 +18,11 @@ function Home() {
     });
   }, [socket]);
 
-  const handleOnClick = (room, user) => {
+  const handleOnClick = (e,room, user) => {
+    const div = e.currentTarget;
+    div.classList.add("disabled");
     socket.emit("join", { room, user }, (response) => {
+      div.classList.remove("disabled");
       if(!user){
         alert("Please login to join the room");
         navigate("/login");
